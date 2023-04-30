@@ -1,0 +1,23 @@
+﻿@foreach (var games in Model.TopScore)
+{
+	<div class="card mb-3">
+		<a href="/Games/@games.Title.ToLower().Replace(" ", "-")" class="card-link text-decoration-none">
+
+
+			<div class="card-body">
+
+				<div class="row">
+					<div class="col text-start">
+						<h5 class="card-title text-dark text-decoration-none">@games.Title</h5>
+						<div class="card-subtitle mb-2 text-muted">@games.Player, @games.CreateDateTime.ToString("yyyy/MM/dd")</div>
+					</div>
+
+					<div class="col-auto">
+						<p class="card-text text-end fs-3 text-dark">@games.Point</p>
+					</div>
+				</div>
+
+			</div>
+		</a>
+	</div>
+}

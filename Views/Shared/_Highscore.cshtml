@@ -1,0 +1,19 @@
+﻿@foreach (var score in Model.TopScores)
+{
+    <div class="card mb-1">
+        <div class="card-body">
+
+
+
+            <div class="row">
+                <div class="col text-start">
+                    <h5 class="card-title text-dark text-decoration-none">@score.Player</h5>
+                    <div class="card-subtitle mb-2 text-muted">@score.CreateDateTime.ToString("yyyy/MM/dd")</div>
+                </div>
+                <div class="col-auto">
+                    <p class="card-text text-end fs-3 text-dark">@score.Point</p>
+                </div>
+            </div>
+        </div>
+    </div>
+}

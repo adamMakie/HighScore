@@ -1,0 +1,18 @@
+﻿@model Highscore.Models.GameViewModel
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-9">
+			<h1>@Model.Title</h1>
+			<p class="text-muted">@Model.ReleaseDate.ToString("yyyy/MM/dd") | @Model.Genre</p>
+			<p>@Model.Description</p>
+		</div>
+		<div class="col-md-3">
+			<img src="@Model.ImageUrl" alt="@Model.Title" class="img-fluid rounded">
+		</div>
+	</div>
+	<h2 class="container text-center mb-4">High Scores</h2>
+	<div class="table-responsive">
+		<partial name="_Highscore" />
+	</div>
+</div>
